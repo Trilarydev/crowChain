@@ -1,0 +1,7 @@
+services:
+  crowchain:
+    image: trilary/as221s6_t09_crowchain:latest
+    container_name: crowchain_service
+    ports:
+      - "3000:3000"
+    restart: always
