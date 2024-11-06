@@ -5,7 +5,7 @@ on:
       - develop
 
 jobs:
-  # SonarCloud
+  # SONARCLOUDD
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
             -Dsonar.host.url=https://sonarcloud.io
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
-  # Docker Hub
+  # DOCKER HUB
   docker:
     name: Build and Push Docker Image
     runs-on: ubuntu-latest
