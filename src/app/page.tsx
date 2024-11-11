@@ -5,6 +5,7 @@ import { getContract } from "thirdweb";
 import { CampaignCard } from "@/components/CampaignCard";
 import { CROWDFUNDING_FACTORY } from "./constants/contracts";
 import { holesky } from "./constants/holesky";
+import MetamaskLogo from "./MetamaskLogo";
 
 export default function Home() {
   // Get CrowdfundingFactory contract
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-7xl px-4 mt-4 sm:px-6 lg:px-8">
       <div className="py-10">
+      <MetamaskLogo />
         <h1 className="text-4xl font-bold text-white mb-4">Campañas:</h1>
         <div className="grid grid-cols-3 gap-4">
           {!isLoadingCampaigns && campaigns && (

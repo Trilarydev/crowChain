@@ -9,11 +9,18 @@ import Logo from "@public/logo.jpeg";
 const Navbar = () => {
     const account = useActiveAccount();
 
-    const [activeTab, setActiveTab] = useState(() => {
-        return localStorage.getItem('activeTab') || 'inicio';
-    });
+    const [activeTab, setActiveTab] = useState('campañas');
 
     useEffect(() => {
+        // Solo se ejecuta en el cliente
+        const savedTab = localStorage.getItem('activeTab');
+        if (savedTab) {
+            setActiveTab(savedTab);
+        }
+    }, []);
+
+    useEffect(() => {
+        // Solo se ejecuta en el cliente
         localStorage.setItem('activeTab', activeTab);
     }, [activeTab]);
 
@@ -42,7 +49,7 @@ const Navbar = () => {
                         <div className="flex flex-shrink-0 items-center">
                             <Image
                                 src={Logo}
-                                alt="Your Company"
+                                alt="CrowChain"
                                 width={48}
                                 height={52}
                                 style={{

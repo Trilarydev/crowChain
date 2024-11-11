@@ -1,0 +1,52 @@
+.skills {
+	margin: auto;
+	padding: 30px;
+	width: 100%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(1, 300px);
+	grid-template-areas: 
+		"description description     benefits    "
+		"characteristics objectives objectives "
+		"html html tech ";
+}
+.skills__container {
+	padding: 0px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+	border-radius: .10rem;
+	background-color: #18181b;
+	transition: .5s;
+	cursor: pointer;
+	box-shadow: 
+		0 1rem 3rem rgba(0,0,0,0.175),
+		-4px 4px 15px 5px rgba(0,0,0,.1);
+}
+.skills__container:hover {
+	filter: brightness(150%);
+}
+.skills__header {
+	padding: 5px 5px;
+	font-weight: semibold;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(var(--color-blue), 1);
+	margin-bottom: 10px;
+	margin-top: 5px;
+	color: white;
+	font-weight: 500;
+}
+.skills__list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.skills__list-item {
+	margin: 5px;
+	padding: 5px 10px;
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, .1);
+	color: #A3C1C1;
+}
